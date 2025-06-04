@@ -74,13 +74,12 @@ class MagnusBilling
         $res = curl_exec($ch);
 
         if ($res === false) {
-            throw new Exception('Curl error: ' . curl_error($ch));
+            throw new \Exception('Curl error: ' . curl_error($ch));
         }
 
         $dec = json_decode($res, true);
         if ( ! $dec) {
-            print_r($res);
-            exit;
+            return null;
         } else {
             return $dec;
         }
