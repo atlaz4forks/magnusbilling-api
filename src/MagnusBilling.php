@@ -18,6 +18,8 @@
  *
  */
 
+namespace Magnus;
+
 class MagnusBilling
 {
     protected $api_key;
